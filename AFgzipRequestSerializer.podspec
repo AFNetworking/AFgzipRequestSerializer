@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "AFgzipRequestSerializer"
   s.version      = "0.0.1"
   s.summary      = "gzip Request Serializer for AFNetworking"
-  s.homepage     = "https://github.com/AFNetworking/AFAmazonS3Client"
+  s.homepage     = "https://github.com/AFNetworking/AFgzipRequestSerializer"
   s.license      = 'MIT'
   s.social_media_url = 'https://twitter.com/AFNetworking'
   s.author       = { "Mattt Thompson" => "m@mattt.me" }
