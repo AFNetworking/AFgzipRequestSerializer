@@ -3,8 +3,8 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "gzip Request Serializer for AFNetworking"
   s.homepage     = "https://github.com/AFNetworking/AFgzipRequestSerializer"
-  s.license      = 'MIT'
   s.social_media_url = 'https://twitter.com/AFNetworking'
+  s.license      = 'MIT'
   s.author       = { "Mattt Thompson" => "m@mattt.me" }
   s.source       = { :git => "https://github.com/AFNetworking/AFgzipRequestSerializer.git",
                      :tag => "0.0.1" }
