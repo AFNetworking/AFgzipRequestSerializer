@@ -80,6 +80,8 @@
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder {
+    [super encodeWithCoder:coder];
+
     [coder encodeObject:self.serializer forKey:NSStringFromSelector(@selector(serializer))];
 }
 
