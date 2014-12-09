@@ -45,6 +45,13 @@
 {
     NSError *serializationError = nil;
     NSMutableURLRequest *mutableRequest = [[self.serializer requestBySerializingRequest:request withParameters:parameters error:&serializationError] mutableCopy];
+
+    [self.HTTPRequestHeaders enumerateKeysAndObjectsUsingBlock:^(id field, id value, BOOL * __unused stop) {
+        if (![request valueForHTTPHeaderField:field]) {
+            [mutableRequest setValue:value forHTTPHeaderField:field];
+        }
+    }];
+
     if (!serializationError && mutableRequest.HTTPBody) {
         NSError *compressionError = nil;
         NSData *compressedData = [mutableRequest.HTTPBody dataByGZipCompressingWithError:&compressionError];
