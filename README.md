@@ -8,9 +8,8 @@
 AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 manager.requestSerializer = [AFgzipRequestSerializer serializerWithSerializer:[AFJSONRequestSerializer serializer]];
 
-NSDictionary *parameters = ;
 [manager POST:@"http://example.com/"
-   parameters:@{@"foo": "bar"}
+   parameters:@{@"foo": @"bar"}
       success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@", responseObject);
 }
